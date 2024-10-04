@@ -1,0 +1,178 @@
+/* Variables globales para el estilo */
+:root {
+  --header-color: #235789;  /* Un tono de azul oscuro */
+  --nav-color: #6daedb;     /* Un tono de azul claro */
+  --sidebar-color: rgba(25, 51, 77, 0.7); /* Un tono de azul muy oscuro */
+  --text-color: #ffffff;    /* Blanco */
+  --hover-color: #e32636;   /* Un tono de rojo */
+  --border-color: #c3c7cd;
+  --link-active-color: rgba(227, 38, 54, 0.6); /* Un tono de rojo */
+  --sidebar-width: 110px;
+}
+
+/* Estilos comunes para cabecera, navegación y barra lateral */
+header, nav {
+  background-color: var(--nav-color);
+}
+
+/* Estilos para bordes */
+header, nav {
+  border-color: var(--border-color);
+}
+
+/* Estilos para enlaces activos */
+.navbar-nav .nav-link.active {
+  color: var(--link-active-color);
+}
+
+/* Estilos para elementos en estado hover */
+.navbar-toggle:hover, .sidebar-nav li a:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+/* Estilos para cabecera y navegación */
+header, nav {
+  z-index: 200;
+  width: 100%;
+  padding: 10px;
+  top: 0; /* Agrega esta línea para que el encabezado se mantenga en la parte superior de la página */
+}
+
+/* Estilos para el logotipo en la cabecera */
+.navbar-brand {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Estilos para el menú de navegación */
+.navbar-nav {
+  margin-left: 0px;
+  top:80px  
+}
+
+.navbar-nav .nav-link {
+  left: 0;
+  color: var(--text-color);
+}
+
+/* Estilos para formularios */
+label.form-label {
+  font-weight: bold;
+}
+
+/* Estilos para las alertas */
+.swal2-popup {
+  font-size: 1rem !important;
+}
+
+/* Estilos para tooltips */
+td[title]:hover:after {
+  content: attr(title);
+  padding: 5px 10px;
+  color: var(--text-color);
+  background-color: #000;
+  position: absolute;
+  z-index: 99999;
+  left: 50%;
+  transform: translateX(-70%);
+}
+
+/* Estilos para las imágenes del carrusel */
+.imagen-carrusel {
+  width: 50px;
+  height: 83px;
+}
+
+.sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  position: relative;
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar-nav li a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Estilos para el cuerpo de las tarjetas */
+#cuerpo {
+  width: 100%;
+}
+
+/* Estilos para el contenedor del cuerpo de la página */
+#cuerpo {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+}
+
+.card {
+  min-width: 600px;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  background-color: #000; /* fondo negro */
+  width: auto;
+  height: 100vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #560b0b; /* Botones blancos */
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente */
+  bottom: 10px; /* Posiciona los pies de foto abajo */
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item img {
+  object-fit: scale-down; /* Asegura que las imágenes se ajusten bien */
+  height: 100vh;
+}
+
+.container .col-md-5.mb-4 {
+  min-width: 50%;
+  margin-right: 120px;
+  height: 100vh;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+  /* Estilos para la barra lateral */
+  
+  body {
+    flex-direction: row;
+  }
+
+  /* Estilos para las tarjetas */
+  .card {
+    min-width: 100%;
+  }
+
+  /* Estilos para el carrusel */
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-item img {
+    height: 50vh;
+  }
+
+}
